@@ -1,0 +1,17 @@
+{
+  "name": "teaching-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm run backend-install & npm run frontend-install",
+    "backend-install": "cd backend && npm install",
+    "frontend-install": "cd frontend && npm install",
+    "start": "npm run start-database & npm run start-backend & npm run start-frontend",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm run dev",
+    "start-database": "cd database && npm start"
+  },
+  "author": "Arushi Aggarwal",
+  "license": "MIT"
+}

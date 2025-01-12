@@ -1,1 +1,1 @@
-# project-template
+# Teaching Project Template
