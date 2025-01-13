@@ -26,11 +26,15 @@
 ```
 npm run setup
 ```
-4. Run the following command in the root directory.
+4. Set up the database
+   ```
+   cd database; npm start; cd ..
+   ```
+5. Run the following command in the root directory.
 ```
 cd backend; npm run reset; cd ..
 ```
-5. Run the following command in the root directory.
+6. Run the following command in the root directory.
 ```
 npm start
 ```
