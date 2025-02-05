@@ -27,9 +27,9 @@
 npm run setup
 ```
 4. Set up the database
-   ```
-   cd database; npm start; cd ..
-   ```
+```
+cd database; npm start; cd ..
+```
 5. Run the following command in the root directory.
 ```
 cd backend; npm run reset; cd ..
@@ -37,4 +37,16 @@ cd backend; npm run reset; cd ..
 6. Run the following command in the root directory.
 ```
 npm start
+```
+
+# On Windows:
+
+```
+npm start
+```
+
+Open a new terminal (with the plus button on the top right)
+
+```
+cd frontend; npm run dev
 ```
