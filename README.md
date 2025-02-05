@@ -38,6 +38,7 @@ cd backend; npm run reset; cd ..
 ```
 npm start
 ```
+7. Run the docker container in the Docker app 
 
 # On Windows:
 
