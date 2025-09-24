@@ -16,7 +16,7 @@ const FormField = ({ name, label, value, onChange }: FormFieldProps) => {
       </div>
       <Form.Control asChild>
         <textarea
-          className="box-border inline-flex w-full resize-none items-center justify-center rounded p-2.5 text-[15px] leading-none"
+          className="box-border inline-flex w-full resize-none items-center justify-center rounded p-2.5 text-[15px] leading-none text-emerald-500"
           value={value}
           onChange={onChange}
           required

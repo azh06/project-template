@@ -42,12 +42,12 @@ export default function BlogCard({ _id, title, author, content, onDelete }: Blog
       ) : (
         <>
           <p>{stateContent}</p>
-          <button onClick={editBlog}>Edit</button>
+          <button onClick={editBlog} className="bg-emerald-800 rounded px-5 py-1 cursor-pointer hover:bg-emerald-900 mt-3 ml-3">Edit</button>
         </>
       )}
 
       <br></br>
-      <button onClick={deleteBlog}>Delete</button>
+      <button onClick={deleteBlog} className="bg-red-800 rounded px-5 py-1 cursor-pointer hover:bg-red-900 mt-3 ml-3">Delete</button>
     </div>
   );
 }
