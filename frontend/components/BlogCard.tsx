@@ -31,7 +31,7 @@ export default function BlogCard({ _id, title, author, content, onDelete }: Blog
   const deleteBlog = async () => {};
 
   return (
-    <div>
+    <div className="p-4 w-80 border-solid border-[#F7EECC] border-4">
       <p>{title}</p>
       <p>By: {author}</p>
       {isEditMode ? (

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import BlogForm from "../../components/BlogForm";
+import NavBar from "../../components/NavBar";
 
 /*
 This is the page.tsx endpoint for the BlogForm, which is 

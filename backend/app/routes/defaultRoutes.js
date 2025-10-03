@@ -15,7 +15,7 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/all-blogs").get(Controller.getBlogs);
-router.route("/create-blog");
+router.route("/create-blog").post(Controller.postBlog);
 router.route("/update-blog/:id");
 router.route("/delete-blog/:id");
 

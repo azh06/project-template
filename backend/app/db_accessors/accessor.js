@@ -14,7 +14,18 @@ export default class Accessor {
   }
 
   /* Function to add a new blog to the database */
-  static async postBlog(blogInfo) {}
+  static async postBlog(blogInfo) {
+    // open connection to db
+    await Connection.open();
+
+    // creating blog with blog info
+    const blog = new Blog(blogInfo);
+
+    // save to db
+    await blog.save();
+
+    return blog;
+  }
 
   /* Function to find a blog by its id and then replace its content body. */
   static async updateBlogById(id, updatedContent) {}

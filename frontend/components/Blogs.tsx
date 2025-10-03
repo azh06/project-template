@@ -19,9 +19,9 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
+    <div className="text-[#474438]">
       <h1>Blogs</h1>
-      <div>
+      <div className="flex flex-wrap gap-4 justify-center">
         {blogs.length > 0 ? (
           blogs.map((blog: Blog, index) => (
             <div key={index}>
