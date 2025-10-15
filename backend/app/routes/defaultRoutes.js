@@ -16,7 +16,7 @@ router.route("/").get((req, res) => {
 
 router.route("/all-blogs").get(Controller.getBlogs);
 router.route("/create-blog").post(Controller.postBlog);
-router.route("/update-blog/:id");
-router.route("/delete-blog/:id");
+router.route("/update-blog/:id").patch(Controller.updateBlog);
+router.route("/delete-blog/:id").delete(Controller.deleteBlog);
 
 export default router;

@@ -36,9 +36,29 @@ export default class Controller {
 
   /* Function to change the body of a blog. 
     The item to change is searched for by its unique id. */
-  static async updateBlog(req, res) {}
+  static async updateBlog(req, res) {
+    try {
+      const updated = req.body.content;
+      const id = req.params.id;
+      const updatedBlog = await Accessor.updateBlogById(id, updated);
+      res.json({ message: "Successfully Edited!", newContentBlog });
+
+    } catch(e) {
+      console.log("Failed due to:", e);
+      res.json({ error: e});
+    }
+  }
 
   /* Function to delete a blog. The item to delete is
     searched for by its unique id. */
-  static async deleteBlog(req, res) {}
+  static async deleteBlog(req, res) {
+    try {
+      const blogId = req.params.id;
+      const deletedBlog = await Accessor.deleteBlogById(blogId);
+      res.json({ message: "Blog Deleted!", deletedBlog })
+    } catch(e) {
+      console.log("Failed due to:", e);
+      res.json({error: e});
+    }
+  }
 }

@@ -28,8 +28,20 @@ export default class Accessor {
   }
 
   /* Function to find a blog by its id and then replace its content body. */
-  static async updateBlogById(id, updatedContent) {}
+  static async updateBlogById(id, updatedContent) {
+    await Connection.open();
+    const updateBlog = await Blog.findByIdAndUpdate(
+      id, 
+      { content: updatedContent },
+      { new: true } 
+    );
+
+    return updateBlog;
+  }
 
   /* Function to find a blog by its id and then delete it. */
-  static async deleteBlogById(id) {}
+  static async deleteBlogById(id) {
+    await Connection.open();
+    await Blog.deleteOne({ _id: id });
+  }
 }

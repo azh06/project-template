@@ -24,11 +24,33 @@ export default function BlogCard({ _id, title, author, content, onDelete }: Blog
     setStateContent(event.target.value);
   };
 
-  const saveBlog = async () => {};
+  const saveBlog = async () => {
+    const response = await fetch(`http://localhost:8001/update-blog/${_id}`, {
+      method: "PATCH", // has to match one used to routes
+      headers: { // define type of information transfer
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ content: stateContent }),
+    });
 
-  const editBlog = () => {};
+    setIsEditMode(false);
+  };
 
-  const deleteBlog = async () => {};
+  const editBlog = () => {
+    setIsEditMode(true);
+  };
+
+  const deleteBlog = async () => {
+    const response = await fetch("http://localhost:8001/delete-blog/" + _id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+        onDelete(_id);
+    }
+  };
 
   return (
     <div className="p-4 w-80 border-solid border-[#F7EECC] border-4">
